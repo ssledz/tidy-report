@@ -3,7 +3,7 @@
 
     <groupId>pl.softech</groupId>
     <artifactId>tidy-report</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>tidy-report</name>
@@ -62,8 +62,8 @@
         <connection>scm:git:git@github.com:ssledz/tidy-report.git</connection>
         <url>scm:git:git@github.com:ssledz/tidy-report.git</url>
         <developerConnection>scm:git:git@github.com:ssledz/tidy-report.git</developerConnection>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
   
     <build>
         <pluginManagement>
@@ -92,4 +92,28 @@
         
     </build>
   
+    <distributionManagement>
+        <repository>
+            <id>repo</id>
+            <name>Internal Repository</name>
+            <url>${internal.repo.path}</url>
+        </repository>
+        
+        <snapshotRepository>
+            <id>repo</id>
+            <name>Internal Repository</name>
+            <url>${internal.repo.path}</url>
+        </snapshotRepository>
+        
+        
+        
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>mvn.repo</id>
+            <url>https://github.com/ssledz/mvn-repo/raw/master</url>
+        </repository>
+    </repositories>  
+ 
 </project>
